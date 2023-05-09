@@ -287,7 +287,7 @@ class Mlp_Self_Check {
 	 */
 	public function is_current_version( Mlp_Version_Number_Interface $current_version, Mlp_Version_Number_Interface $last_version ) {
 
-		if ( version_compare( $current_version, $last_version, '=<' ) ) {
+		if ( version_compare( $current_version, $last_version, '<=' ) ) {
 			return self::NO_UPGRADE_NEEDED;
 		}
 
